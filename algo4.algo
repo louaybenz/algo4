@@ -1,0 +1,24 @@
+PROCEDURE Insertion_Sort(arr,n) 
+VAR
+    arr : ARRAY_OF INTEGER [];
+    i, j, count : INTEGER;
+BEGIN
+    FOR i FROM 1 TO n  DO
+        count = arr[i];  
+        j = i - 1;
+        WHILE (j >= 0 AND arr[j] > count) DO
+            arr[j + 1] = arr[j];  
+            j = j - 1; 
+        END_WHILE
+        arr[j + 1] = count;
+    END_FOR
+END
+ALGORITHM Insertion_sort
+VAR
+    ARR : ARRAY_OF INTEGER[];
+    n : INTEGER =lengthARR;
+BEGIN
+    Read (ARR);
+    Insertion_Sort(ARR,n);
+    Write (ARR);
+END
